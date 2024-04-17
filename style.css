@@ -25,6 +25,20 @@ body {
 	font-family: Inter, sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #98e1fc;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 61);
+}
+
+
 /*************************************************
  			common class styles
 **************************************************/
@@ -92,7 +106,26 @@ a {
 	border-radius: 10px;
 	color: lightsteelblue;
 	grid-template-columns: 1fr 1fr;
-	border: 1px solid rgb(153, 198, 249);
+	border:2px dashed rgb(153, 198, 249);
+	animation: anicolor 2s infinite;
+}
+
+@keyframes anicolor {
+	0% {
+	border-color: aqua;
+	}
+	25% {
+	border-color: #c2fff7;
+	}
+	50% {
+	border-color: aqua;
+	}
+	75% {
+	border-color: #c2fff7;
+	}
+	100% {
+	border-color: aqua;
+	}
 }
 
 .profile {
@@ -138,7 +171,7 @@ a {
 	display: block;
 	font-size: 3.8rem;
 	font-weight: 200;
-	color: #7cdafc;
+	color: #98e1fc;
 	letter-spacing: 2px;
 	margin-bottom: -0.8rem;
 	text-transform: uppercase;
@@ -162,7 +195,7 @@ a {
 	font-size: 1.5rem;
 	width: max-content;
 	text-align: center;
-	margin: 10px 0 15px;
+	margin: 10px 0 25px;
 	border: 2px dashed white;
 	animation: text 2s infinite;
 }
@@ -192,7 +225,7 @@ a {
 	display: block;
 	cursor: pointer;
 	font-size: 1.4rem;
-	margin-top: 1rem;
+	margin-top: 1.8rem;
 	font-weight: 600;
 	user-select: none;
 	position: relative;
@@ -356,6 +389,7 @@ a {
 
 .group-2 .description {
 	color: white;
+	text-align: justify !important;
 }
 
 hr {
